@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pomoto: Pomodoro Timer for Productivity</title>
+
+    <!-- These two lines provide automatic page and style reloading when files change -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/lib/client/updater.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="pomoto.css" />
+    <link rel="stylesheet" href="EditableText.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway" rel="stylesheet">
+
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="logo-container">
+        <p>POMOTO</h1>
+      </div>
+      <div id="login-container" class="header-containers">
+        <form id="loginForm">
+          <input name="userid" placeholder="Enter username" />
+          <button class="header-buttons" type="submit" name="login">Login</button>
+        </form>
+      </div>
+      <div id="user-info" class="hidden" class="header-left-containers">
+        <div id="username-display"></div>
+        <button id="analytics-btn" class="header-buttons">View my stats</button>
+      </div>
+    </header>
+    <main id="timer-page">
+      <section id="timer-container">
+        <button id="new-task">New Task
+          <span><img id="add" src="images/add.svg" alt=""></span>
+        </button>
+        <h2></h2>
+        <form id="activity-form" class="hidden">
+          <input name="task" placeholder="Add Task" />
+          <button class="activity-btn" type="submit" name="add">Add</button>
+        </form>
+        <div id="timer">
+          <span id="minutes">25</span>
+          <span id="colon">:</span>
+          <span id="seconds">00</span>
+        </div>
+        <div id="controls">
+          <button id="start-button">Start</button>
+        </div>
+        <h3 id="message">Work Session</h3>
+      </section>
+      <section id="sidebar" class="hidden">
+        <section id="editPanel" class="paper">
+          <h2>Welcome Back</h2>
+          <div>
+            <label for="nameInput">Name:</label>
+            <div id="nameContainer"></div>
+          </div>
+          <div>
+            <label for="quoteInput">My Motivational Quote:</label>
+            <div id="quoteContainer"></div>
+          </div>
+        </section>
+    </main>
+    <header id="analytics-header" class="hidden">
+      <div class="header-left-containers">
+        <button id="go-back" class="header-buttons">Home</button>
+      </div>
+      <h2>Your Focus Sessions in Summary</h2>
+    </header>
+    <main id="analytics-page" class="hidden">
+      <div id="no-activity-container">
+        <p>No activity in the past week. Get working!</p>
+      </div>
+      <div id="chart-container">
+        <canvas id="donut-chartcanvas"></canvas>
+      </div>
+    </main>
+    <footer>
+      <button id="delete-acc" class="hidden" class="header-buttons">Delete Account</button>
+    </footer>
+  </body>
+</html>

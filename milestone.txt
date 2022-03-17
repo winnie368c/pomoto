@@ -1,0 +1,42 @@
+CS193X Final Project Milestone
+=============================
+
+Project Name: Pomoto: Pomodoro Timer for Productivity
+Your Name: Winnie Chen
+Your SUNetID: winniecc
+
+Overview
+--------
+So far, I have planned out the main page, which is the page displaying the timer and the login button. 
+My next steps are to finish the CSS styling on the main page and then write the Javascript for the timer buttons and login. I'm also thinking to have a form where the user inputs what task they plan to work on before starting the timer, and this will be saved to the API as a POST request.
+Afterwards, I will need to:
+- Write the HTML and CSS for the user analytics page, the page that displays what tasks the user did using the Pomodoro timer
+- Write the Javascript for displaying the user analytics page
+- Write the API methods 
+- Create the backend for above requests
+
+Project Changes
+---------------
+I added the backend component that allows each user to get a customized analytics page, as described above.
+
+Follow-up
+---------
+I just had a question regarding using class assignment code - are we only allowed to use what we wrote or can we also use some of the code provided to us in the assignments?
+I've found some useful bits of code here and there from files such as EditableText and DynamicList and wasn't sure if I could use them in my project. 
+
+API
+---
+- POST (posting user tasks to API OR posting inspirational quotes the user enters)
+- GET (getting user tasks to display on user analytics page OR getting all the quotes the user entered to display on an "inspiration" page)
+
+External libraries and code
+---------------------------
+I'm not planning to use any external libraries or code.
+
+Collaboration and resources
+---------------------------
+I'm planning to only use the assignment code from class. 
+
+Anything else?
+-------------
+None
