@@ -12,5 +12,7 @@ To encourage productivity, this web app breaks users' workdays down into 25-minu
 ## Overview
 ### Home Page:
 **Users can login and edit their profile with changes being saved to the database. They can add a task and start the timer.**
+![](gifs/HomePage.gif)
 ### Analytics Page:
 **The user's personal activity history is displayed in a doughnut chart.**
+![](gifs/AnalyticsPage.gif)
