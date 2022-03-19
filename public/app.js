@@ -88,11 +88,11 @@ class App {
     document.querySelector("#delete-acc").classList.add("hidden");
     this._start.classList.add("hidden");
     /* Count down the time. */
-    let totalMin = 25;
+    let totalMin = 1;
     let time = totalMin * 60;
     let minutes = document.querySelector("#minutes");
     let seconds = document.querySelector("#seconds");
-    this._interval = setInterval(function () {
+    let interval = setInterval(function () {
       minutes.textContent = Math.floor(time / 60);
       let secondsMath = time % 60;
       /* Prepend a 0 if seconds is single digit. */
@@ -105,7 +105,7 @@ class App {
       /* If time is up, stop counting down and display options on timer and
       delete acc button. */
       if (time === -1) {
-        clearInterval(this._interval);
+        clearInterval(interval);
         document.querySelector("#message").textContent = "Take a break!";
         document.querySelector("#timer-container h2").textContent = "";
         this._newTaskBtn = document.querySelector("#new-task");
@@ -115,6 +115,7 @@ class App {
         document.querySelector("#delete-acc").classList.remove("hidden");
       }
     }, 1000);
+    this._interval = interval;
   }
 
   async _onLogin(event) {
