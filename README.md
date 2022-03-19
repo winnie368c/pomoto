@@ -6,7 +6,7 @@ To encourage productivity, this web app breaks users' workdays down into 25-minu
 * frontend written in HTML, CSS, and Javascript
 * fetch to access backend
 * asynchronous API (async/await)
-* HTTP methods (GET, POST, DELETE, PUT, PATCH)
+* HTTP methods (GET, POST, DELETE, PATCH)
 * MongoDB database
 
 ## Overview
