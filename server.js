@@ -5,7 +5,7 @@ import path from "path";
 import initApi from "./api/index.js";
 import updater from "./lib/server/updater.js";
 
-const PORT = process.env.PORT || 1930;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 const server = http.createServer(app);
